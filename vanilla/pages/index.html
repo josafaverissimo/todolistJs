@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="../src/todolist/styles.css">
+    <title>Todo List</title>
+</head>
+<body>
+    <main>
+        <section class="addTask">
+            <div class="addTask__header">
+                <h1>Add task</h1>
+            </div>
+            
+            <form class="addTask__form">
+                <div class="addTask__form__field">
+                    <label>Title</label>
+                    <input class="addTask__form--defaultInput" type="text" name="title">
+                </div>
+
+                <div class="addTask__form__field">
+                    <div class="addTask__form__field__data addTask__form__field__data--marginBottom">
+                        <label>Date</label>
+                        <input class="addTask__form--defaultInput" type="date" name="date">
+                    </div>
+
+                    <div class="addTask__form__field__data">
+                        <label>Time</label>
+                        <input class="addTask__form--defaultInput" type="time" name="time">
+                    </div>
+                </div>
+
+                <button class="addTask__form__submiter--default">Add</button>
+            </form>
+        </section>
+
+        <section class="tasksWrapper"></section>
+    </main>
+
+    <script src="../src/todolist/index.js"></script>
+</body>
+</html>

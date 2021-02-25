@@ -1,0 +1,152 @@
+main {
+    font-family: 'Raleway', sans-serif;
+    color: #69738c;
+
+    display: flex;
+    justify-content: center;
+}
+
+.addTask {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: calc((100% * 6) / 12);
+    max-width: calc((100% * 6) / 12);
+
+    padding: 0 15px;
+}
+
+.addTask__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addTask__header {
+    background: linear-gradient(to right, #e9ebf0, #fff);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+    border-radius: 24px;
+    text-align: center;
+    width: 100%;
+}
+
+.addTask__form__field {
+    margin-top: 32px;
+    background: linear-gradient(to right, #e9ebf0, #fff);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+    border-radius: 24px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    padding: 16px 0;
+}
+
+.addTask__form--defaultInput:focus {
+    border: 1px solid #69738c;
+    box-shadow: inset 0 0 0 transparent, 0 0 0 0.2rem rgba(105, 115, 140, 0.25);
+}
+
+.addTask__form--defaultInput {
+    margin-top: 10px;
+    color: #69738c;
+    border: none;
+    border-bottom: 1px solid #69738c;
+    background: none;
+    outline: none;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    width: 80%;
+}
+
+.addTask__form__field__data--marginBottom {
+    margin-bottom: 16px;
+}
+
+.addTask__form__field__data {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.addTask__form__submiter--default {
+    background: linear-gradient(to right, #fd5275, #fd583d);
+    box-shadow: 0 3px 16px rgba(253, 88, 61, 1);
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    padding: 12px 0;
+    margin-top: 32px;
+    font-size: 1.2rem;
+    color: #fff;
+
+    border-radius: 24px;
+}
+
+.tasksWrapper {
+    flex-basis: calc((100% * 6) / 12);
+    max-width: calc((100% * 6) / 12);
+
+    padding: 0 15px;
+
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: center;
+}
+
+.tasksWrapper__task:hover {
+    border: 1px solid#80bdff;
+    box-shadow: inset 0 0 0 transparent, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.tasksWrapper__task:hover {
+    opacity: .6;
+}
+
+.tasksWrapper__task:hover::before {
+    opacity: .7;
+    display: block;
+}
+.tasksWrapper__task::before {
+    width: 100%;
+    height: 100%;
+    background: url(../../public/images/correct-mark.svg) no-repeat center;
+    background-size: 50% auto;
+    border-radius: 24px;
+    content: "";
+    opacity: 1;
+    display: none;
+    position: absolute;
+}
+
+.tasksWrapper__task {
+    border: 1px solid#fff;
+    background: linear-gradient(to right, #e9ebf0, #fff);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+    border-radius: 24px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+
+    flex-basis: calc((100% * 3) / 12);
+    max-width: calc((100% * 3) / 12);
+    
+    margin: 7.5px;
+    padding-top: 0px;
+
+    transition: opacity .5s ease-in-out, border 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    cursor: pointer;
+}
+
+.tasksWrapper__task--title {
+    font-size: 1.3rem;
+}
+
+.tasksWrapper__task--subtitle {
+    font-size: 1rem;
+}
