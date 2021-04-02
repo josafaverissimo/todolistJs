@@ -90,6 +90,7 @@ main {
 .tasksWrapper {
     flex-basis: calc((100% * 6) / 12);
     max-width: calc((100% * 6) / 12);
+    height: 0px;
 
     padding: 0 15px;
 
@@ -99,7 +100,7 @@ main {
     justify-content: center;
 }
 
-.tasksWrapper__task:hover {
+.tasksWrapper__taskCardWrapper:hover {
     border: 1px solid#80bdff;
     box-shadow: inset 0 0 0 transparent, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
@@ -108,23 +109,7 @@ main {
     opacity: .6;
 }
 
-.tasksWrapper__task:hover::before {
-    opacity: .7;
-    display: block;
-}
-.tasksWrapper__task::before {
-    width: 100%;
-    height: 100%;
-    background: url(../../public/images/correct-mark.svg) no-repeat center;
-    background-size: 50% auto;
-    border-radius: 24px;
-    content: "";
-    opacity: 1;
-    display: none;
-    position: absolute;
-}
-
-.tasksWrapper__task {
+.tasksWrapper__taskCardWrapper {
     border: 1px solid#fff;
     background: linear-gradient(to right, #e9ebf0, #fff);
     box-shadow: 0 3px 10px rgba(0,0,0,0.12);
@@ -132,6 +117,7 @@ main {
     text-align: center;
     width: 100%;
     position: relative;
+    border: 1px solid#fff;
 
     flex-basis: calc((100% * 3) / 12);
     max-width: calc((100% * 3) / 12);
@@ -140,7 +126,6 @@ main {
     padding-top: 0px;
 
     transition: opacity .5s ease-in-out, border 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    cursor: pointer;
 }
 
 .tasksWrapper__task--title {
@@ -149,4 +134,22 @@ main {
 
 .tasksWrapper__task--subtitle {
     font-size: 1rem;
+}
+
+.addTask__done {
+    flex-basis: calc((100% * 6) / 12);
+    max-width: calc((100% * 6) / 12);
+    height: 0px;
+    width: 100%;
+
+    padding: 0 15px;
+
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: center;
+}
+
+.addTask__done .tasksWrapper__task:hover::before {
+    opacity: 0;
 }
